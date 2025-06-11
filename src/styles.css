@@ -35,24 +35,3 @@
   font-synthesis: none;
   text-rendering: optimizeLegibility;
 }
-
-/* body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-} */
-
-span.construction-item.barrier-1:hover {
-  border: 1px solid red;
-}
-
-#title span {
-  pointer-events: all;
-}
-
-#title .construction-item.barrier-2:hover {
-  border: 1px solid blue;
-  transform: translate(10px, 20px);
-}

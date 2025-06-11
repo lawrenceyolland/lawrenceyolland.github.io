@@ -48,7 +48,7 @@ export const Tag = ({ language }: TagProps) => {
   const { pathStyle, label, blobVersion, svgStyle } = classMap[language];
 
   return (
-    <div className="text-lg max-w-xl text-center leading-relaxed inline-block mix-blend-plus-lighter">
+    <div className="max-w-xl text-center leading-relaxed inline-block mix-blend-color">
       <span className="relative inline-block mx-1 align-middle">
         <svg
           viewBox="0 0 1 1"
@@ -62,7 +62,7 @@ export const Tag = ({ language }: TagProps) => {
             }
           />
         </svg>
-        <span className="relative z-10 text-slate-800 font-bold uppercase text-[1.2em] flex items-center justify-center h-full">
+        <span className="relative z-10 text-slate-800 font-bold uppercase text-[1em] flex items-center justify-center h-full">
           {label.toUpperCase()}
         </span>
       </span>
