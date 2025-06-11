@@ -16,7 +16,7 @@ const classMap: Record<Language, Properties> = {
     label: "Golang",
     pathStyle: "fill-blue-500",
     blobVersion: "1",
-    svgStyle: "-left-3 -top-4 w-[10em] h-[4em]",
+    svgStyle: "left-[-10px] -top-6 w-[6em] h-[4em]",
   },
   node: {
     label: "Node.js",
@@ -28,13 +28,13 @@ const classMap: Record<Language, Properties> = {
     label: "React",
     pathStyle: "fill-cyan-500",
     blobVersion: "1",
-    svgStyle: "left-5 -top-5 w-[4em] h-[4em]",
+    svgStyle: "left-2 -top-5 w-[4em] h-[4em]",
   },
   python: {
     label: "Python",
     pathStyle: "fill-yellow-500",
     blobVersion: "1",
-    svgStyle: "-left-2 w-[5em] h-[3em]",
+    svgStyle: "-left-2 -top-1 w-[5em] h-[3em]",
   },
   matlab: {
     label: "Matlab",
@@ -44,12 +44,12 @@ const classMap: Record<Language, Properties> = {
   },
 };
 
-export const Tag = ({ language }: TagProps) => {
+const Tag = ({ language }: TagProps) => {
   const { pathStyle, label, blobVersion, svgStyle } = classMap[language];
 
   return (
-    <div className="max-w-xl text-center leading-relaxed inline-block mix-blend-color">
-      <span className="relative inline-block mx-1 align-middle">
+    <div className="max-w-xl text-center leading-relaxed inline-block ">
+      <div className="relative inline-block mx-1 align-middle">
         <svg
           viewBox="0 0 1 1"
           preserveAspectRatio="none"
@@ -62,10 +62,10 @@ export const Tag = ({ language }: TagProps) => {
             }
           />
         </svg>
-        <span className="relative z-10 text-slate-800 font-bold uppercase text-[1em] flex items-center justify-center h-full">
-          {label.toUpperCase()}
+        <span className="relative z-10 font-bold text-[1em] flex items-center justify-center h-full">
+          {label}
         </span>
-      </span>
+      </div>
     </div>
   );
 };
