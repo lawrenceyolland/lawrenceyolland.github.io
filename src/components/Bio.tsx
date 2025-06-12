@@ -3,7 +3,7 @@ import { GoTag, MatlabTag, NodeTag, PythonTag, ReactTag } from "./LanguageTag.";
 const Bio = () => {
   return (
     <div className="max-w-xl leading-relaxed inline-block">
-      <span className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-3xl text-slate-800 dark:text-white">
+      <span className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-slate-800 dark:text-white">
         Highly curious, data-oriented researcher turned software engineer,
         experienced in problem-solving, and building innovative solutions
         through interdisciplinary collaboration. I have experience across tech
