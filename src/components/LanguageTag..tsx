@@ -40,7 +40,7 @@ const classMap: Record<Language, Properties> = {
     label: "Matlab",
     pathStyle: "fill-orange-600",
     blobVersion: "1",
-    svgStyle: "-left-12 -top-5 w-[8em] h-[4em]",
+    svgStyle: "-left-12 -top-5 w-[6em] h-[4em]",
   },
 };
 
@@ -48,7 +48,7 @@ const Tag = ({ language }: TagProps) => {
   const { pathStyle, label, blobVersion, svgStyle } = classMap[language];
 
   return (
-    <div className="max-w-xl text-center leading-relaxed inline-block ">
+    <div className="max-w-xl text-center leading-relaxed inline-block relative shadow-amber-400">
       <div className="relative inline-block mx-1 align-middle">
         <svg
           viewBox="0 0 1 1"

@@ -1,6 +1,7 @@
 import Title from "./components/Title";
 import Bio from "./components/Bio";
 import useTheme from "./hooks/useTheme";
+import Crane from "./components/Crane";
 
 const App = () => {
   const { theme, toggleTheme } = useTheme();
@@ -20,6 +21,9 @@ const App = () => {
           <Bio />
         </section>
       </div>
+      <section>
+        <Crane />
+      </section>
     </div>
   );
 };
