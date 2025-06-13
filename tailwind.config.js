@@ -5,11 +5,10 @@ module.exports = {
         "alum-texture":
           'url("https://www.transparenttextures.com/patterns/brushed-alum-dark.png")',
       },
-      boxShadow: {
-        "truss-shadow": "2px 2px 4px rgba(0, 0, 0, 0.6)",
-      },
       dropShadow: {
-        "crate-shadow": "2px 2px 4px rgba(0, 0, 0, 0.6)",
+        "crane-shadow": "0px 4px 12px rgba(0, 0, 0, 0.1)",
+        "truss-shadow": "0px 4px 12px rgba(0, 0, 0, 0.4)",
+        "beam-inner-shadow": "inset 0px 4px 12px rgba(0, 0, 0, 0.4)",
       },
     },
   },

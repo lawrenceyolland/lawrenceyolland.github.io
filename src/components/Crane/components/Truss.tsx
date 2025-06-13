@@ -18,7 +18,7 @@ type TrussProps = {
 const Truss = ({ tx, r }: TrussProps) => {
   return (
     <div
-      className={`absolute w-5 h-1 bg-amber-700 bg-alum-texture bg-auto ${r} ${tx} translate-y-3 z-1 shadow-truss-shadow`}
+      className={`absolute w-[30px] h-1 bg-red-400 bg-alum-texture bg-auto ${r} ${tx} translate-y-3 z-1 drop-shadow-truss-shadow`}
     />
   );
 };
