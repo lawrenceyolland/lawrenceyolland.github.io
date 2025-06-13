@@ -45,17 +45,17 @@
 @keyframes winch-rotate {
   0%,
   100% {
-    transform: rotate(-45deg);
+    transform: rotate(-60deg);
   }
   50% {
-    transform: rotate(-90deg);
+    transform: rotate(-120deg);
   }
 }
 
 @keyframes line-scale {
   0%,
   100% {
-    transform: scaleY(1.5);
+    transform: scaleY(1.25);
   }
   50% {
     transform: scaleY(1);
@@ -85,6 +85,6 @@
   transform-origin: top;
 }
 
-#crate {
+#crate-parent {
   animation: crate-move 4s ease-in-out infinite;
 }
