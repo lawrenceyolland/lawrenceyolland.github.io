@@ -42,16 +42,6 @@
   }
 }
 
-/* @keyframes winch-rotate {
-  0%,
-  100% {
-    transform: rotate(-120deg);
-  }
-  50% {
-    transform: rotate(-60deg);
-  }
-} */
-
 @keyframes winch-rotate {
   0% {
     transform: rotate(0deg);
@@ -85,7 +75,7 @@
 }
 
 .blob1 path {
-  animation: blob1 6s linear;
+  animation: blob1 6s ease-in-out infinite;
 }
 
 #winch {
