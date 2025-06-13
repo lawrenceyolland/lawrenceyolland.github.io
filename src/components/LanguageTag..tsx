@@ -11,7 +11,7 @@ type TagProps = {
   language: Language;
 };
 
-const classMap: Record<Language, Properties> = {
+export const classMap: Record<Language, Properties> = {
   go: {
     label: "Golang",
     pathStyle: "fill-blue-500",
@@ -70,8 +70,10 @@ const Tag = ({ language }: TagProps) => {
   );
 };
 
-export const ReactTag = () => <Tag language="react" />;
-export const NodeTag = () => <Tag language="node" />;
-export const GoTag = () => <Tag language="go" />;
-export const PythonTag = () => <Tag language="python" />;
-export const MatlabTag = () => <Tag language="matlab" />;
+export default Tag;
+
+// export const ReactTag = () => <Tag language="react" />;
+// export const NodeTag = () => <Tag language="node" />;
+// export const GoTag = () => <Tag language="go" />;
+// export const PythonTag = () => <Tag language="python" />;
+// export const MatlabTag = () => <Tag language="matlab" />;
