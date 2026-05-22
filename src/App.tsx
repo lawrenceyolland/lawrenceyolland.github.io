@@ -1,11 +1,11 @@
 import Title from "./components/Title";
 import Bio from "./components/Bio";
-import useTheme from "./hooks/useTheme";
+// import useTheme from "./hooks/useTheme";
 import Crane from "./components/Crane/Crane.tsx";
 import Links from "./components/Links.tsx";
 
 const App = () => {
-    const { theme, toggleTheme } = useTheme();
+    // const { theme, toggleTheme } = useTheme();
     return (
         <div className="min-h-screen relative">
             <header className="fixed top-0 left-0 right-0 z-50 flex justify-end px-10 py-5">
