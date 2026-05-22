@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 type Language = "python" | "go" | "react" | "node" | "matlab" | "ruby" | "java";
 
 type Properties = {
@@ -58,7 +58,7 @@ export const classMap: Record<Language, Properties> = {
 };
 
 const Tag = ({ language }: TagProps) => {
-  const [wobble, setWobble] = useState(null);
+  const [wobble, setWobble] = useState(0);
 
   const { color, label, blobVersion, svgStyle } = classMap[language];
 
