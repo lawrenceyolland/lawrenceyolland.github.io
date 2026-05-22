@@ -46,42 +46,44 @@ const PROJECT_SECTION: Section[] = [
 ];
 
 export type Card = {
+    path: string;
     src: string;
     r: number;
     tx: number;
-    ty:number;
+    ty: number;
+    comment?: string;
 }
 
-const DOG_CARDS: Card[] = [
-    { src: "snow_dog.jpg",  r: -6, tx:   0, ty:  10 },
-    { src: "above_the_clouds_with_doggo.jpg",  r: -6, tx:   0, ty:  10 },
-    { src: "doggy_trail_run.jpg",              r:  3, tx: 135, ty:  -8 },
-    { src: "forestry_climb_with_doggo.jpg",    r: -4, tx: 270, ty:  14 },
-    { src: "hill_walk_with_doggo.jpg",        r:  5, tx: 405, ty:  -5 },
-    { src: "muddy_paws.jpg",                   r: -3, tx: 540, ty:  12 },
-    { src: "mugdock_with_doggo.jpg",           r:  6, tx: 675, ty:  -6 },
+export const DOG_CARDS: Card[] = [
+    { src: "snow_dog.jpg",                     path: "Dog", r: -6, tx:   0, ty:  10 },
+    { src: "above_the_clouds_with_doggo.jpg",  path: "Dog", r: -6, tx:   0, ty:  10 },
+    { src: "doggy_trail_run.jpg",              path: "Dog", r:  3, tx: 135, ty:  -8 },
+    { src: "forestry_climb_with_doggo.jpg",    path: "Dog", r: -4, tx: 270, ty:  14 },
+    { src: "hill_walk_with_doggo.jpg",         path: "Dog", r:  5, tx: 405, ty:  -5 },
+    { src: "muddy_paws.jpg",                   path: "Dog", r: -3, tx: 540, ty:  12 },
+    { src: "mugdock_with_doggo.jpg",           path: "Dog", r:  6, tx: 675, ty:  -6 },
 ];
 
-const HOME_CARDS: Card[] = [
-    { src: "clydeside.jpg",  r: -6, tx:   0, ty:  10 },
-    { src: "first_bike_ride.jpg",              r:  3, tx: 135, ty:  -8 },
-    { src: "highland_bog.jpg",    r: -4, tx: 270, ty:  14 },
-    { src: "hilltop_pic.jpg",        r:  5, tx: 405, ty:  -5 },
-    { src: "out_with_the_kiddos.jpg",           r:  6, tx: 675, ty:  -6 },
-    { src: "skating_about.jpg",           r:  -4, tx: 675, ty:  -6 },
+export const HOME_CARDS: Card[] = [
+    { src: "clydeside.jpg",                    path: "Home", r: -6, tx:   0, ty:  10 },
+    { src: "first_bike_ride.jpg",              path: "Home", r:  3, tx: 135, ty:  -8 },
+    { src: "highland_bog.jpg",                 path: "Home", r: -4, tx: 270, ty:  14 },
+    { src: "hilltop_pic.jpg",                  path: "Home", r:  5, tx: 405, ty:  -5 },
+    { src: "out_with_the_kiddos.jpg",          path: "Home", r:  6, tx: 675, ty:  -6 },
+    { src: "skating_about.jpg",                path: "Home", r: -4, tx: 675, ty:  -6 },
 ];
 
-const DIY_CARDS: Card[] = [
-    { src: "bird_house.jpg",  r: -6, tx:   0, ty:  10 },
-    { src: "deck_and_mess.jpg",    r: -4, tx: 270, ty:  14 },
-    { src: "deck_plus_helper.jpg",        r:  5, tx: 405, ty:  -5 },
-    { src: "play_kitchen.jpg",           r:  6, tx: 675, ty:  -6 },
+export const DIY_CARDS: Card[] = [
+    { src: "bird_house.jpg",                   path: "DIY", r: -6, tx:   0, ty:  10 },
+    { src: "deck_and_mess.jpg",                path: "DIY", r: -4, tx: 270, ty:  14 },
+    { src: "deck_plus_helper.jpg",             path: "DIY", r:  5, tx: 405, ty:  -5 },
+    { src: "play_kitchen.jpg",                 path: "DIY", r:  6, tx: 675, ty:  -6 },
 ];
 
 const Links = () => {
     return (
         <div className="flex flex-col gap-4">
-            <CareerBox chips={["TypeScript", "React", "Node.js", "Go"]} />
+            <CareerBox chips={["TypeScript", "React", "Node.js", "Go", "Python", "SQL"]} />
             <LinksBox
                 sectionData={RESEARCH_SECTION}
                 chips={["cell biology", "image analysis", "Python", "MatLab" , "R"]}>
@@ -94,15 +96,15 @@ const Links = () => {
             </LinksBox>
         <LinksBox
             sectionData={PROJECT_SECTION}
-            chips={["Java", "Go", "Python", "JavaScript", "Node.js"]}>
+            chips={["Java", "Go", "Python", "JavaScript", "Node.js", "Ruby"]}>
             <div>
                 <h4>🚧 Under Construction 🚧</h4>
             </div>
         </LinksBox>
 
-            <PersonalBox heading="Doggo" path='Dog' cards={DOG_CARDS} />
-            <PersonalBox heading="Life" path='Home' cards={HOME_CARDS} />
-            <PersonalBox heading="Other Builds" path="DIY" cards={DIY_CARDS}/>
+            <PersonalBox heading="Doggo" cards={DOG_CARDS} />
+            <PersonalBox heading="Life" cards={HOME_CARDS} />
+            <PersonalBox heading="Other Builds" cards={DIY_CARDS}/>
 
         </div>
     )

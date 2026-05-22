@@ -14,7 +14,7 @@ type TagProps = {
 
 export const classMap: Record<Language, Properties> = {
   go: {
-    label: "Golang",
+    label: "Go",
     color: "#3b82f6",
     blobVersion: "1",
     svgStyle: "w-[6em] h-[4em]",

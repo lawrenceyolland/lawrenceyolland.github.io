@@ -3,7 +3,7 @@ import  {useState} from "react";
 import {SectionHeading} from "./SectionHeading.tsx";
 import {Card} from "./Links.tsx";
 
-type PersonalBoxProps = { path: string, heading: string, cards: Card[] }
+type PersonalBoxProps = { heading: string, cards: Card[] }
 
 const chooseIcon = (path:string) => {
     switch(path) {
@@ -19,12 +19,11 @@ const chooseIcon = (path:string) => {
 }
 
 export const PersonalBox = ({
-                                path,
                                 cards,
                                 heading,
                             }: PersonalBoxProps) => {
     const [collapsed, setCollapsed] = useState(false)
-    const icon = chooseIcon(path)
+    const icon = chooseIcon(cards[0].path)
     return <div className="flex flex-col w-full p-5 gap-4 rounded-xl relative">
         <div className="flex flex-row items-center gap-3">
             <SectionHeading text={heading} />
@@ -43,7 +42,7 @@ export const PersonalBox = ({
         ) : (
             <div className="overflow-x-auto w-full">
                 <div className="inline-flex items-end py-8 px-16 min-w-full ">
-                    {cards.map(({ src, r, ty }, i) => (
+                    {cards.map(({ src, r, ty, path }, i) => (
                         <div key={src}
                              className="transition-transform duration-200 hover:-translate-y-6 flex-shrink-0 -ml-4 first:ml-0"
                              style={{

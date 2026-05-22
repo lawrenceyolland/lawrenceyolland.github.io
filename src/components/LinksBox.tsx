@@ -32,7 +32,7 @@ export const LinksBox = ({sectionData, chips, children}: LinksBoxProps) => {
                     {chips.map((topic) => (
                         <span
                             key={topic}
-                            className="p-2 text-xs bg-amber-100 rounded-xl flex items-center"
+                            className="p-2 text-xs bg-amber-100 rounded-xl flex items-center font-mono"
                         >
                             {topic}
                         </span>

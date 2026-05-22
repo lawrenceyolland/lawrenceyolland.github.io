@@ -1,6 +1,8 @@
 import Tag, { classMap } from "./LanguageTag.tsx";
 
-const BIO_TEXT = "Spent 4 years in the lab developing data-processing tools in Python and MATLAB. 6+ years building client-facing React applications and constructing APIs in Node.js, and Go in the broadcast industry. Currently expanding into Java and Solutions Architecture"
+const BIO_TEXT = "Spent 4 years in the lab building data-processing tools in Python and MATLAB to solve complex cell biology questions. " +
+    "6+ years in the broadcast industry delivering client-facing React apps, Node.js APIs, and Go tooling. " +
+    "Currently branching into Java and Solutions Architecture."
 
 type Language = keyof typeof classMap;
 

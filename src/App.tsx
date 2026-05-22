@@ -1,11 +1,23 @@
+import {useEffect} from "react";
+
 import Title from "./components/Title";
 import Bio from "./components/Bio";
 // import useTheme from "./hooks/useTheme";
 import Crane from "./components/Crane/Crane.tsx";
-import Links from "./components/Links.tsx";
+import Links, {DIY_CARDS, DOG_CARDS, HOME_CARDS} from "./components/Links.tsx";
+
+const imagePaths = [...DOG_CARDS, ...HOME_CARDS, ...DIY_CARDS]
 
 const App = () => {
     // const { theme, toggleTheme } = useTheme();
+    useEffect(() => {
+        imagePaths.forEach(card => {
+            const img = new Image();
+            img.src = `/image_gallery/${card.path}/${card.src}`;
+        });
+    }, []);
+
+
     return (
         <div className="min-h-screen relative">
             <header className="fixed top-0 left-0 right-0 z-50 flex justify-end px-10 py-5">
