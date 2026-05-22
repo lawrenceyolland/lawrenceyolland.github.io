@@ -13,7 +13,7 @@ const isLanguage = (token: string): token is Language => {
 const Bio = () => {
     return (
         <div className="max-w-2xl leading-relaxed inline-block z-20">
-            <div className="text-sm sm:text-base md:text-lg lg:text-lg xl:text-md text-slate-800 dark:text-white">
+            <div className="text-sm sm:text-base md:text-md lg:text-md xl:text-md text-slate-800 dark:text-white">
                 <p>
                     Glasgow based researcher-turned-software engineer with a background spanning computational biology, data analysis, and full-stack development.
                 </p>
