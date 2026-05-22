@@ -1,25 +1,16 @@
-type TranslateX =
-  | "translate-x-1"
-  | "translate-x-20"
-  | "translate-x-30"
-  | "translate-x-40"
-  | "translate-x-50"
-  | "translate-x-60"
-  | "translate-x-70"
-  | "translate-x-80";
-
-type Rotation = "rotate-45" | "-rotate-45";
 
 type TrussProps = {
-  tx: TranslateX;
-  r: Rotation;
+  tx: string;
+  r: string;
+  ty: string;
+  w: string;
 };
 
-const Truss = ({ tx, r }: TrussProps) => {
+const Truss = ({ tx, ty, r, w = 'w-[30px]' }: TrussProps) => {
   return (
-    <div
-      className={`absolute w-[30px] h-1 bg-red-400 bg-alum-texture bg-auto ${r} ${tx} translate-y-3 z-1 drop-shadow-truss-shadow`}
-    />
+      <div
+          className={`absolute ${w} h-1 bg-slate-600 bg-alum-texture bg-auto ${r} ${tx} ${ty} z-0 drop-shadow-truss-shadow`}
+      />
   );
 };
 
