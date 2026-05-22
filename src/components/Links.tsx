@@ -57,7 +57,7 @@ const DOG_CARDS: Card[] = [
     { src: "above_the_clouds_with_doggo.jpg",  r: -6, tx:   0, ty:  10 },
     { src: "doggy_trail_run.jpg",              r:  3, tx: 135, ty:  -8 },
     { src: "forestry_climb_with_doggo.jpg",    r: -4, tx: 270, ty:  14 },
-    { src: "hill_walk_with_doggo.jpeg",        r:  5, tx: 405, ty:  -5 },
+    { src: "hill_walk_with_doggo.jpg",        r:  5, tx: 405, ty:  -5 },
     { src: "muddy_paws.jpg",                   r: -3, tx: 540, ty:  12 },
     { src: "mugdock_with_doggo.jpg",           r:  6, tx: 675, ty:  -6 },
 ];
@@ -75,7 +75,7 @@ const DIY_CARDS: Card[] = [
     { src: "bird_house.jpg",  r: -6, tx:   0, ty:  10 },
     { src: "deck_and_mess.jpg",    r: -4, tx: 270, ty:  14 },
     { src: "deck_plus_helper.jpg",        r:  5, tx: 405, ty:  -5 },
-    { src: "play_kitchen.jpeg",           r:  6, tx: 675, ty:  -6 },
+    { src: "play_kitchen.jpg",           r:  6, tx: 675, ty:  -6 },
 ];
 
 const Links = () => {
