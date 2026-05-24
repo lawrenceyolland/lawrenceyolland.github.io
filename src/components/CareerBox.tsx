@@ -1,6 +1,7 @@
 import {useState} from "react";
 import {SectionHeading} from "./SectionHeading.tsx";
 import {ExternalIcon} from "./ExternalIcon.tsx";
+import StackChips from "./StackChips.tsx";
 
 type RoleItem = {
     label: string;
@@ -104,7 +105,7 @@ const CAREER_SECTION: CareerSection = {
 
 
 export const CareerBox = ({ chips }: {chips: string[]}) => {
-    const [collapsed, setCollapsed] = useState(false)
+    const [collapsed, setCollapsed] = useState(true)
     return (
         <div className="flex flex-col w-full p-5 gap-4 rounded-xl">
             <div className="flex flex-row items-center gap-3">
@@ -114,22 +115,15 @@ export const CareerBox = ({ chips }: {chips: string[]}) => {
                     className="cursor-pointer transition-all duration-300 text-2xl flex w-full"
                 >
                     <div>💼</div>
-                    <div className="flex ml-auto">{collapsed ? '-' : '+'}</div>
+                    <div className="flex ml-auto">{collapsed ? '+' : '-'}</div>
                 </button>
             </div>
 
-            {!collapsed ? (
-                <div className="flex flex-row flex-wrap gap-2">
-                    {chips.map((topic) => (
-                        <span key={topic} className="p-2 text-xs bg-amber-100 rounded-xl flex items-center font-mono">
-                            {topic}
-                        </span>
-                    ))}
-                </div>
+            {collapsed ? (
+                <StackChips chips={chips}/>
             ) : (
                 <div className="flex flex-col gap-6 relative">
                     <div className="absolute left-[5rem] top-2 bottom-2 w-px bg-red-400" />
-
                     {CAREER_SECTION.roles.map((role) => (
                         <div className="flex flex-row gap-4">
                             <div className='w-12 text-right shrink-0 text-xl text-slate-400'>
@@ -141,10 +135,10 @@ export const CareerBox = ({ chips }: {chips: string[]}) => {
                             </div>
                             <div className="flex flex-col gap-2 pb-8 pt-0">
                                 <div>
-                                    <h4 className="text-xl font-semibold text-slate-700 dark:text-slate-300">
+                                    <h4 className="text-lg text-slate-700 dark:text-slate-300">
                                         {role.heading}
                                     </h4>
-                                    <h5 className="text-lg text-slate-400 dark:text-slate-500">
+                                    <h5 className="text-md text-slate-400 dark:text-slate-500">
                                         {role.company} · {role.period}
                                     </h5>
                                 </div>
@@ -152,7 +146,6 @@ export const CareerBox = ({ chips }: {chips: string[]}) => {
                                     {role.items.map((item) => (
                                         <li key={item.label}>
                                             {item.url ? (
-
                                                 <a href={item.url}
                                                    target={item.external ? "_blank" : undefined}
                                                    rel={item.external ? "noopener noreferrer" : undefined}

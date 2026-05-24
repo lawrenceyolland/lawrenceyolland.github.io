@@ -1,6 +1,7 @@
 import {useState} from "react";
 import {SectionHeading} from "./SectionHeading.tsx";
 import {ExternalIcon} from "./ExternalIcon.tsx";
+import TechChips from "./StackChips.tsx";
 
 type Chips = string[]
 
@@ -28,7 +29,7 @@ const PROJECT_DATA: ProjectSection[] = [
             {
                 heading: 'Folio Scout Monorepo',
                 description: '',
-                src: '',
+                src: 'https://github.com/lawrenceyolland/folio-scout',
                 imgs: ['']
             }
         ],
@@ -105,53 +106,53 @@ const PROJECT_DATA: ProjectSection[] = [
 ]
 
 export const ProjectBox = () => {
-    const [collapsed, setCollapsed] = useState(false)
-    return PROJECT_DATA.map((section) => (
-        <div key={section.heading} className="flex flex-col w-full p-5 gap-4 rounded-2xl ">
+    const [collapsed, setCollapsed] = useState(true)
+        return <div className="flex flex-col w-full p-5 gap-4 rounded-2xl ">
             <div className="flex flex-row items-center gap-3">
-                <SectionHeading text={section.heading} />
+                <SectionHeading text="Projects" />
                 <button
                     onClick={() => setCollapsed((prev) => !prev)}
                     className="cursor-pointer transition-all duration-300 text-2xl flex w-full"
                 >
                     <div>💻</div>
-                    <div className="flex ml-auto">{collapsed ? '-' : '+'}</div>
+                    <div className="flex ml-auto">{collapsed ? '+' : '-'}</div>
                 </button>
             </div>
 
-            {!collapsed ? (
-                <div className="flex flex-row flex-wrap gap-2">
-                    {section.chips.map((topic) => (
-                        <span
-                            key={topic}
-                            className="p-2 text-xs bg-amber-100 rounded-xl flex items-center font-mono"
-                        >
-                            {topic}
-                        </span>
-                    ))}
-                </div>
-            ) : (
-                <div className="flex flex-col gap-3.5">
-                    <ol className="flex flex-col gap-3.5">
-                        {section.items.map((item) => (
-                            <li key={item.heading}>
-                                <a href={item.src}
-                                   target={item.src ? "_blank" : undefined}
-                                   rel={item.src ? "noopener noreferrer" : undefined}
-                                   className="text-slate-900 dark:text-white text-sm hover:underline"
-                                >
-                                    {item.heading}
-                                    {item.src && <ExternalIcon />}
-                                </a>
-                                <p className="text-slate-500 dark:text-slate-400 text-xs mt-0.5 leading-snug">
-                                    {item.description}
+            {
+              !collapsed && PROJECT_DATA.map((project) => {
+                    return <div className="flex flex-col flex-wrap">
+                        <div className="flex flex-col gap-2 pl-2 pr-2 pt-0">
+                            <div>
+                                <h4 className="text-lg text-slate-700 dark:text-slate-300">
+                                    {project.heading}
+                                </h4>
+
+                                <TechChips chips={project.chips} />
+
+                                <p className="text-sm pt-2 text-slate-400 dark:text-slate-500">
+                                    {project.description}
                                 </p>
-                            </li>
-                        ))}
-                    </ol>
-                </div>
-            )}
+                            </div>
+                            {
+                                project.items.map((item)=> {
+                                    return <div key={item.heading} className="flex flex-col">
+                                        <a href={item.src}
+                                           target="_blank"
+                                           rel="noopener noreferrer"
+                                           className="text-slate-900 text-sm hover:underline flex items-center"
+
+                                        >
+                                            <h5>{item.heading}</h5>
+                                            {item.src && <ExternalIcon />}
+                                        </a>
+                                    </div>
+                                })
+                            }
+                        </div>
+                    </div>
+                })
+            }
         </div>
-    ))
 }
 

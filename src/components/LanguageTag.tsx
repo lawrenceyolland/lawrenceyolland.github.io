@@ -17,7 +17,7 @@ export const classMap: Record<Language, Properties> = {
     label: "Go",
     color: "#3b82f6",
     blobVersion: "1",
-    svgStyle: "w-[6em] h-[4em]",
+    svgStyle: "w-[3em] h-[3em]",
   },
   node: {
     label: "Node.js",
@@ -80,7 +80,7 @@ const Tag = ({ language }: TagProps) => {
               d="M0.15,0.5 C0.1,0.3 0.35,0.15 0.6,0.25 C0.85,0.35 0.8,0.7 0.55,0.75 C0.3,0.8 0.2,0.7 0.15,0.5 Z"
           />
         </svg>
-        <span className="relative font-bold text-[1em]" style={{ zIndex: 1 }}>
+        <span className="relative font-semibold text-[1em]" style={{ zIndex: 1 }}>
         {label}
       </span>
       </div>

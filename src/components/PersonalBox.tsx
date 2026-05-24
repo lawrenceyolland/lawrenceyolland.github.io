@@ -22,7 +22,7 @@ export const PersonalBox = ({
                                 cards,
                                 heading,
                             }: PersonalBoxProps) => {
-    const [collapsed, setCollapsed] = useState(false)
+    const [collapsed, setCollapsed] = useState(true)
     const icon = chooseIcon(cards[0].path)
     return <div className="flex flex-col w-full p-5 gap-4 rounded-xl relative">
         <div className="flex flex-row items-center gap-3">
@@ -32,14 +32,11 @@ export const PersonalBox = ({
                 className="cursor-pointer transition-all duration-300 text-2xl flex flex-row w-full"
             >
                 <div>{icon}</div>
-                <div className="flex ml-auto">{collapsed ? '-' : '+'}</div>
+                <div className="flex ml-auto hover:opacity-80">{collapsed ? '+' : '-'}</div>
             </button>
         </div>
-        {!collapsed ? (
-            <div className="flex flex-row flex-wrap gap-2">
 
-            </div>
-        ) : (
+        {!collapsed && (
             <div className="overflow-x-auto w-full">
                 <div className="inline-flex items-end py-8 px-16 min-w-full ">
                     {cards.map(({ src, r, ty, path }, i) => (

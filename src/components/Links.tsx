@@ -1,6 +1,7 @@
 import {CareerBox} from "./CareerBox.tsx";
 import {LinksBox} from "./LinksBox.tsx";
 import {PersonalBox} from "./PersonalBox.tsx";
+import {ProjectBox} from "./ProjectBox.tsx";
 
 type LinkItem = {
     label: string;
@@ -32,15 +33,6 @@ const RESEARCH_SECTION: Section[] = [
                 url: "https://discovery.ucl.ac.uk/id/eprint/10068186/1/L%20Yolland%20-%20Actin%20Flows%20&%20Cell%20Motility%20-%20PhD%20Thesis%202019.pdf",
                 external: true,
             },
-        ],
-    },
-];
-
-const PROJECT_SECTION: Section[] = [
-    {
-        heading: "Projects",
-        items: [
-
         ],
     },
 ];
@@ -94,14 +86,8 @@ const Links = () => {
                 <img src="/hemocyte_flow_field.png" alt="hemocyte flow field" className="max-w-full" />
             </div>
             </LinksBox>
-        <LinksBox
-            sectionData={PROJECT_SECTION}
-            chips={["Java", "Go", "Python", "JavaScript", "Node.js", "Ruby"]}>
-            <div>
-                <h4>🚧 Under Construction 🚧</h4>
-            </div>
-        </LinksBox>
 
+            <ProjectBox />
             <PersonalBox heading="Doggo" cards={DOG_CARDS} />
             <PersonalBox heading="Life" cards={HOME_CARDS} />
             <PersonalBox heading="Other Builds" cards={DIY_CARDS}/>

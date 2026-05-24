@@ -3,7 +3,7 @@ import Winch from "./components/Winch";
 
 const Crane = () => {
   return (
-      <div className="absolute bottom-60 left-10 z-0 opacity-80 hidden sm:hidden md:hidden lg:hidden xl:block 2xl:block">
+      <div className="absolute bottom-60 left-20 z-50 opacity-80 hidden 2xl:block pointer-events-none">
         <div className="relative -rotate-0 border-t-4 border-slate-800 bg-alum-texture dark:border-gray-300 rounded-2xl z-40">
           <div className="absolute -left-0 -top-8 h-fit w-fit p-3 bg-slate-600 z-30 bg-alum-texture" >
             <span className="font-bold text-white text-xs font-mono">CLYDEPORT:3000</span>
@@ -52,7 +52,7 @@ const Crane = () => {
           </div>
         </div>
 
-        <div className="absolute left-20 top-20 h-50 w-25 border-4 border-slate-600 overflow-clip z-30">
+        <div className="absolute left-20 top-20 h-40 w-25 border-4 border-slate-600 overflow-clip z-30">
           <Truss tx="-translate-x-15" r="rotate-45"  ty="translate-y-[22px]" w="w-50" />
           <Truss tx="-translate-x-15" r="-rotate-45" ty="translate-y-[22px]" w="w-50" />
 
@@ -65,5 +65,6 @@ const Crane = () => {
       </div>
   );
 };
+
 
 export default Crane;

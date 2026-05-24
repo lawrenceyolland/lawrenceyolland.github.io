@@ -4,6 +4,7 @@ import {SectionHeading} from "./SectionHeading.tsx";
 import {ExternalIcon} from "./ExternalIcon.tsx";
 import {Section} from "./Links.tsx";
 import {Role} from "./CareerBox.tsx";
+import StackChips from "./StackChips.tsx";
 
 type LinksBoxProps = {
     sectionData: Section[] | Role[];
@@ -23,21 +24,12 @@ export const LinksBox = ({sectionData, chips, children}: LinksBoxProps) => {
                 >
 
                     <div>{section.heading === 'Projects' ? '💻' : '🔬'}</div>
-                    <div className="flex ml-auto">{collapsed ? '-' : '+'}</div>
+                    <div className="flex ml-auto ">{collapsed ? '-' : '+'}</div>
                 </button>
             </div>
 
             {!collapsed ? (
-                <div className="flex flex-row flex-wrap gap-2">
-                    {chips.map((topic) => (
-                        <span
-                            key={topic}
-                            className="p-2 text-xs bg-amber-100 rounded-xl flex items-center font-mono"
-                        >
-                            {topic}
-                        </span>
-                    ))}
-                </div>
+                <StackChips chips={chips}/>
             ) : (
                 <div className="flex flex-col gap-3.5">
                     <ol className="flex flex-col gap-3.5">
@@ -46,7 +38,7 @@ export const LinksBox = ({sectionData, chips, children}: LinksBoxProps) => {
                                 <a href={item.url}
                                    target={item.external ? "_blank" : undefined}
                                    rel={item.external ? "noopener noreferrer" : undefined}
-                                   className="text-slate-900 dark:text-white text-sm hover:underline"
+                                   className="text-slate-900  text-sm hover:underline"
                                 >
                                     {item.label}
                                     {item.external && <ExternalIcon />}
