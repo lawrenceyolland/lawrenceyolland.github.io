@@ -33,7 +33,7 @@ const PROJECT_DATA: ProjectSection[] = [
                 imgs: ['']
             }
         ],
-        chips: ['Astro', 'TypeScript', 'Hono', 'Java', 'Claude'],
+        chips: ['Astro', 'TypeScript', 'Hono', 'Java'],
     },
     {
         heading: 'The Open Scientist',
@@ -74,7 +74,7 @@ const PROJECT_DATA: ProjectSection[] = [
     },
     {
         heading: 'Coding with the Kiddos',
-        description: "My eldest (4yo) has recently taken an interest in programming, so here's some informal coding experiments we've built",
+        description: "My eldest (4yo) has recently taken an interest in programming, so here's some informal coding experiments we've built.",
         items: [
             {
                 heading: 'Super Simple Cat',
@@ -107,7 +107,7 @@ const PROJECT_DATA: ProjectSection[] = [
 
 export const ProjectBox = () => {
     const [collapsed, setCollapsed] = useState(true)
-        return <div className="flex flex-col w-full p-5 gap-4 rounded-2xl ">
+        return <div className="flex flex-col w-full p-5 pb-0 gap-4 rounded-2xl ">
             <div className="flex flex-row items-center gap-3">
                 <SectionHeading text="Projects" />
                 <button
@@ -121,16 +121,16 @@ export const ProjectBox = () => {
 
             {
               !collapsed && PROJECT_DATA.map((project) => {
-                    return <div className="flex flex-col flex-wrap">
+                    return <div className="flex flex-col flex-wrap pb-5 border-b-1">
                         <div className="flex flex-col gap-2 pl-2 pr-2 pt-0">
                             <div>
-                                <h4 className="text-lg text-slate-700 dark:text-slate-300">
-                                    {project.heading}
-                                </h4>
-
-                                <TechChips chips={project.chips} />
-
-                                <p className="text-sm pt-2 text-slate-400 dark:text-slate-500">
+                                <div className="flex flex-row flex-wrap items-center gap-1">
+                                    <span className="text-md text-slate-800 font-semibold">
+                                        {project.heading}
+                                    </span>
+                                    <TechChips chips={project.chips} />
+                                </div>
+                                <p className="text-sm pt-2 text-slate-600 ">
                                     {project.description}
                                 </p>
                             </div>
@@ -140,12 +140,13 @@ export const ProjectBox = () => {
                                         <a href={item.src}
                                            target="_blank"
                                            rel="noopener noreferrer"
-                                           className="text-slate-900 text-sm hover:underline flex items-center"
+                                           className="text-slate-600 text-sm hover:underline flex items-center"
 
                                         >
                                             <h5>{item.heading}</h5>
                                             {item.src && <ExternalIcon />}
                                         </a>
+                                        <p className="text-sm">{item.description}</p>
                                     </div>
                                 })
                             }

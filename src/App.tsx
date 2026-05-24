@@ -12,6 +12,7 @@ const App = () => {
         imagePaths.forEach(card => {
             const img = new Image();
             img.src = `/image_gallery/${card.path}/${card.src}`;
+            img.decode().catch(() => {});
         });
     }, []);
 
@@ -23,8 +24,8 @@ const App = () => {
             <div className="hidden md:flex fixed top-14 left-0 w-1/2 h-[calc(100vh-3.5rem)] flex-col py-10 px-16 relative overflow-auto bg-[#fdf6e3]">
                 <div className="bg-inherit z-100">
                     <Title />
-                <Bio />
-                <DownloadResume />
+                    <Bio />
+                    <DownloadResume />
                 </div>
                 <Crane />
             </div>
@@ -36,7 +37,6 @@ const App = () => {
                     <Title />
                     <Bio />
                     <DownloadResume />
-
                 </div>
 
                 <div className="py-5 pr-10">

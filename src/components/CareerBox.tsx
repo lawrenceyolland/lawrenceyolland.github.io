@@ -52,7 +52,7 @@ const CAREER_SECTION: CareerSection = {
                 },
                 {
                     label: "Customer-Facing React Dashboard",
-                    description: "Owned the full product lifecycle — from Figma design and planning through to production — building a business-critical dashboard with fully customisable and persistent layouts (data, sizing, positioning, colours, and labels), and rich graphical renderings of workflow summary statistics.",
+                    description: "Owned the full product lifecycle - from Figma design and planning through to production — building a business-critical dashboard with fully customisable and persistent layouts (data, sizing, positioning, colours, and labels), and rich graphical renderings of workflow summary statistics.",
                 },
                 {
                     label: "App Modernisation",
@@ -107,12 +107,12 @@ const CAREER_SECTION: CareerSection = {
 export const CareerBox = ({ chips }: {chips: string[]}) => {
     const [collapsed, setCollapsed] = useState(true)
     return (
-        <div className="flex flex-col w-full p-5 gap-4 rounded-xl">
+        <div className="flex flex-col w-full p-5 pb-0 gap-4 rounded-xl">
             <div className="flex flex-row items-center gap-3">
                 <SectionHeading text="Career" />
                 <button
                     onClick={() => setCollapsed((prev) => !prev)}
-                    className="cursor-pointer transition-all duration-300 text-2xl flex w-full"
+                    className="cursor-pointer transition-all duration-300 text-2xl flex w-full ml-2.5"
                 >
                     <div>💼</div>
                     <div className="flex ml-auto">{collapsed ? '+' : '-'}</div>
@@ -122,23 +122,24 @@ export const CareerBox = ({ chips }: {chips: string[]}) => {
             {collapsed ? (
                 <StackChips chips={chips}/>
             ) : (
-                <div className="flex flex-col gap-6 relative">
-                    <div className="absolute left-[5rem] top-2 bottom-2 w-px bg-red-400" />
-                    {CAREER_SECTION.roles.map((role) => (
-                        <div className="flex flex-row gap-4">
-                            <div className='w-12 text-right shrink-0 text-xl text-slate-400'>
+                <div className="flex flex-col relative">
+                    {CAREER_SECTION.roles.map((role, index) => (
+                        <div className="flex flex-row ">
+                            <div className='w-12 text-right shrink-0 text-xl text-slate-800' style={{ paddingTop: index > 0 ? "10px" : "0px" }}>
                                 <h4>{role.period.slice(0,4)}</h4>
                             </div>
                             <div className="flex flex-col items-center w-8 shrink-0">
-                                <div className="w-2 h-2 rounded-full bg-red-400 mt-1.5 shrink-0" />
-
+                                {index !== CAREER_SECTION.roles.length && (
+                                    <div className="flex-1 w-px bg-amber-600" />
+                                    )
+                                }
                             </div>
-                            <div className="flex flex-col gap-2 pb-8 pt-0">
+                            <div className="flex flex-col gap-2" style={{ paddingTop: index > 0 ? "10px" : "0px" }}>
                                 <div>
-                                    <h4 className="text-lg text-slate-700 dark:text-slate-300">
+                                    <h4 className="text-lg text-slate-800">
                                         {role.heading}
                                     </h4>
-                                    <h5 className="text-md text-slate-400 dark:text-slate-500">
+                                    <h5 className="text-md text-amber-600">
                                         {role.company} · {role.period}
                                     </h5>
                                 </div>
@@ -155,11 +156,11 @@ export const CareerBox = ({ chips }: {chips: string[]}) => {
                                                     {item.external && <ExternalIcon />}
                                                 </a>
                                             ) : (
-                                                <span className="text-slate-900 dark:text-white text-sm font-medium">
-                                        {item.label}
-                                    </span>
+                                                <span className="text-slate-800 dark:text-white text-sm font-medium">
+                                        {           item.label}
+                                                </span>
                                             )}
-                                            <p className="text-slate-500 dark:text-slate-400 text-xs mt-0.5 leading-snug">
+                                            <p className="text-slate-500  text-xs mt-0.5 leading-snug">
                                                 {item.description}
                                             </p>
                                         </li>

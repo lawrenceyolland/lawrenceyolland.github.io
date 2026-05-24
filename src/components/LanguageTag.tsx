@@ -64,7 +64,7 @@ const Tag = ({ language }: TagProps) => {
 
   return (
       <div
-          className="inline-block relative mx-1 align-middle cursor-pointer"
+          className="inline-block relative mx-1 align-middle"
           onMouseEnter={() => setWobble(w => w + 1)}
       >
         <svg

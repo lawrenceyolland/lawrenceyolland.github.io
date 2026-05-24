@@ -1,12 +1,12 @@
-import Truss from "./components/Truss";
-import Winch from "./components/Winch";
+import Truss from "./Truss.tsx";
+import Winch from "./Winch.tsx";
 
 const Crane = () => {
   return (
       <div className="absolute bottom-60 left-20 z-50 opacity-80 hidden 2xl:block pointer-events-none">
         <div className="relative -rotate-0 border-t-4 border-slate-800 bg-alum-texture dark:border-gray-300 rounded-2xl z-40">
           <div className="absolute -left-0 -top-8 h-fit w-fit p-3 bg-slate-600 z-30 bg-alum-texture" >
-            <span className="font-bold text-white text-xs font-mono">CLYDEPORT:3000</span>
+            <span className="text-xs font-mono text-white">CLYDEPORT:3000</span>
           </div>
           <div className="absolute -left-0 -top-2 h-10 w-10 bg-slate-600 z-20 bg-alum-texture" />
           <div className="flex gap-3 flex-col relative drop-shadow-beam-inner-shadow z-3">

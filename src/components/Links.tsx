@@ -47,29 +47,29 @@ export type Card = {
 }
 
 export const DOG_CARDS: Card[] = [
-    { src: "snow_dog.jpg",                     path: "Dog", r: -6, tx:   0, ty:  10 },
-    { src: "above_the_clouds_with_doggo.jpg",  path: "Dog", r: -6, tx:   0, ty:  10 },
-    { src: "doggy_trail_run.jpg",              path: "Dog", r:  3, tx: 135, ty:  -8 },
-    { src: "forestry_climb_with_doggo.jpg",    path: "Dog", r: -4, tx: 270, ty:  14 },
-    { src: "hill_walk_with_doggo.jpg",         path: "Dog", r:  5, tx: 405, ty:  -5 },
-    { src: "muddy_paws.jpg",                   path: "Dog", r: -3, tx: 540, ty:  12 },
-    { src: "mugdock_with_doggo.jpg",           path: "Dog", r:  6, tx: 675, ty:  -6 },
+    { path: "Dog", src: "snow_dog.webp", r: -6, tx:   0, ty:  10 },
+    { path: "Dog", src: "above_the_clouds_with_doggo.webp", r: -6, tx:   0, ty:  10 },
+    { path: "Dog", src: "doggy_trail_run.webp", r:  3, tx: 135, ty:  -8 },
+    { path: "Dog", src: "forestry_climb_with_doggo.webp", r: -4, tx: 270, ty:  14 },
+    { path: "Dog", src: "hill_walk_with_doggo.webp", r:  5, tx: 405, ty:  -5 },
+    { path: "Dog", src: "muddy_paws.webp", r: -3, tx: 540, ty:  12 },
+    { path: "Dog", src: "mugdock_with_doggo.webp", r:  6, tx: 675, ty:  -6 },
 ];
 
 export const HOME_CARDS: Card[] = [
-    { src: "clydeside.jpg",                    path: "Home", r: -6, tx:   0, ty:  10 },
-    { src: "first_bike_ride.jpg",              path: "Home", r:  3, tx: 135, ty:  -8 },
-    { src: "highland_bog.jpg",                 path: "Home", r: -4, tx: 270, ty:  14 },
-    { src: "hilltop_pic.jpg",                  path: "Home", r:  5, tx: 405, ty:  -5 },
-    { src: "out_with_the_kiddos.jpg",          path: "Home", r:  6, tx: 675, ty:  -6 },
-    { src: "skating_about.jpg",                path: "Home", r: -4, tx: 675, ty:  -6 },
+    { path: "Home", src: "clydeside.webp", r: -6, tx:   0, ty:  10 },
+    { path: "Home", src: "first_bike_ride.webp", r:  3, tx: 135, ty:  -8 },
+    { path: "Home", src: "highland_bog.webp", r: -4, tx: 270, ty:  14 },
+    { path: "Home", src: "hilltop_pic.webp", r:  5, tx: 405, ty:  -5 },
+    { path: "Home", src: "out_with_the_kiddos.webp", r:  6, tx: 675, ty:  -6 },
+    { path: "Home", src: "skating_about.webp", r: -4, tx: 675, ty:  -6 },
 ];
 
 export const DIY_CARDS: Card[] = [
-    { src: "bird_house.jpg",                   path: "DIY", r: -6, tx:   0, ty:  10 },
-    { src: "deck_and_mess.jpg",                path: "DIY", r: -4, tx: 270, ty:  14 },
-    { src: "deck_plus_helper.jpg",             path: "DIY", r:  5, tx: 405, ty:  -5 },
-    { src: "play_kitchen.jpg",                 path: "DIY", r:  6, tx: 675, ty:  -6 },
+    { path: "DIY", src: "bird_house.webp", r: -6, tx:   0, ty:  10 },
+    { path: "DIY", src: "deck_and_mess.webp", r: -4, tx: 270, ty:  14 },
+    { path: "DIY", src: "deck_plus_helper.webp", r:  5, tx: 405, ty:  -5 },
+    { path: "DIY", src: "play_kitchen.webp", r:  6, tx: 675, ty:  -6 },
 ];
 
 const Links = () => {
@@ -88,9 +88,9 @@ const Links = () => {
             </LinksBox>
 
             <ProjectBox />
-            <PersonalBox heading="Doggo" cards={DOG_CARDS} />
-            <PersonalBox heading="Life" cards={HOME_CARDS} />
-            <PersonalBox heading="Other Builds" cards={DIY_CARDS}/>
+            <PersonalBox path="Home" heading="Life" cards={HOME_CARDS} />
+            <PersonalBox path="Dog" heading="Doggo" cards={DOG_CARDS} />
+            <PersonalBox path="DIY" heading="Other Builds" cards={DIY_CARDS}/>
 
         </div>
     )

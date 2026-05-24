@@ -14,11 +14,11 @@ const Bio = () => {
     return (
         <div className="max-w-2xl leading-relaxed inline-block z-20">
             <div className="text-sm sm:text-base md:text-md lg:text-md xl:text-md text-slate-800 dark:text-white">
-                <p>
+                <p className="whitespace-normal">
                     Glasgow based researcher-turned-software engineer with a background spanning computational biology, data analysis, and full-stack development.
                 </p>
                 <br/>
-                <p className="whitespace-break-spaces">
+                <p className="whitespace-normal">
                 {BIO_TEXT.split(" ").map((token, idx) => {
                     const trailing = token.match(/[.,]$/)?.[0] ?? "";
                     const stripped = token.replace(/[.,]$/g, "").toLowerCase();
@@ -35,8 +35,8 @@ const Bio = () => {
                 })}
                 </p>
                 <br/>
-                <p>
-                    Equally comfortable working with research scientists, product teams, and enterprise stakeholders — motivated by problems at the intersection of rigorous analysis and practical engineering.
+                <p className="whitespace-normal">
+                    Equally comfortable working with research scientists, product teams, and enterprise stakeholders - motivated by problems at the intersection of rigorous analysis and practical engineering.
                 </p>
             </div>
         </div>

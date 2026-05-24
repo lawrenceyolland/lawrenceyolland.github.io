@@ -15,7 +15,7 @@ type LinksBoxProps = {
 export const LinksBox = ({sectionData, chips, children}: LinksBoxProps) => {
     const [collapsed, setCollapsed] = useState(false)
     return sectionData.map((section) => (
-        <div key={section.heading} className="flex flex-col w-full p-5 gap-4 rounded-2xl ">
+        <div key={section.heading} className="flex flex-col w-full p-5 pb-0 gap-4 rounded-2xl ">
             <div className="flex flex-row items-center gap-3">
                 <SectionHeading text={section.heading} />
                 <button
@@ -38,7 +38,7 @@ export const LinksBox = ({sectionData, chips, children}: LinksBoxProps) => {
                                 <a href={item.url}
                                    target={item.external ? "_blank" : undefined}
                                    rel={item.external ? "noopener noreferrer" : undefined}
-                                   className="text-slate-900  text-sm hover:underline"
+                                   className="text-slate-800 text-md hover:underline font-semibold"
                                 >
                                     {item.label}
                                     {item.external && <ExternalIcon />}
