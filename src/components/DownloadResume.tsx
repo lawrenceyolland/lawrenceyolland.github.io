@@ -1,8 +1,8 @@
 const DownloadResume = () => {
     return <div className="py-5 pr-10">
         <a
-            href="/documents/Lawrence_Yolland_Resume_2026.pdf"
-            download="Lawrence_Yolland_Resume_2026.pdf"
+            href="/documents/LawrenceYollandResume2026.pdf"
+            download="LawrenceYollandResume2026.pdf"
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-sm border border-slate-200 dark:border-slate-700 hover:border-slate-400 dark:hover:border-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-all duration-150 text-sm font-medium text-slate-900 dark:text-white"
         >
             <svg
