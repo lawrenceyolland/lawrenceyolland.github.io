@@ -21,15 +21,15 @@ type ProjectSection = {
 
 const PROJECT_DATA: ProjectSection[] = [
     {
-        heading: 'Folio Scout',
+        heading: 'Project Scout',
         description: "An in-progress system that evaluates GitHub repositories (currently frontend apps) and produces structured, senior-engineer-style feedback focused on code quality, " +
             "architecture, and portfolio readiness. It extracts signals from repository structure and implementation patterns using a multi-stage pipeline combining TypeScript services, " +
             "a Java-based static analysis layer, and LLM-based synthesis to generate actionable review output.",
         items: [
             {
-                heading: 'Folio Scout Monorepo',
+                heading: 'Project Scout Monorepo',
                 description: '',
-                src: 'https://github.com/lawrenceyolland/folio-scout',
+                src: 'https://github.com/lawrenceyolland/project-scout',
                 imgs: ['']
             }
         ],
