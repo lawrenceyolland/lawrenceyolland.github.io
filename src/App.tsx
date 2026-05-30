@@ -33,13 +33,13 @@ const App = () => {
 
 
             <div className="right-panel md:fixed md:top-14 md:right-0 md:w-1/2 md:h-[calc(100vh-3.5rem)] md:overflow-y-auto pt-14 md:pt-0">
-                <div className="md:hidden py-10 px-8">
+                <div className="md:hidden pt-10 pb-0 px-8">
                     <Title />
                     <Bio />
                     <DownloadResume />
                 </div>
 
-                <div className="py-5 pr-10">
+                <div className="xs:pt-0 sm:pt-0 md:pt-0 lg:pt-5 xl:pt-5 pr-10 ">
                     <Links />
                 </div>
 

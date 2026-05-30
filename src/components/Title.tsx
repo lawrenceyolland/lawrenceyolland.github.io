@@ -3,7 +3,7 @@ const Title = () => {
       <div className="mb-2.5">
           <h1
               id="title"
-              className="text-xl sm:text-xl md:text-2xl lg:text-3xl xl:text-3xl text-slate-800"
+              className="text-xl sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-slate-800"
           >
               Dr Lawrence Yolland
           </h1>
@@ -20,7 +20,7 @@ const Title = () => {
                       className="h-[100%] hover:opacity-80"
                   >
                       <img
-                          src="/LI-In-Bug.png"
+                          src="/image_gallery/Research/LI-In-Bug.png"
                           alt="LinkedIn Icon"
                           className="h-5 sm:h-5 md:h-6 lg:h-7 xl:h-8 w-auto"
                       />

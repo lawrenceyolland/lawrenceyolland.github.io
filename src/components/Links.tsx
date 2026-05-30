@@ -81,9 +81,9 @@ const Links = () => {
                 chips={["cell biology", "image analysis", "Python", "MatLab" , "R"]}>
                 <div className="flex flex-row flex-wrap gap-4 mt-2">
                 <video autoPlay loop muted playsInline className="max-w-full">
-                    <source src="/random_v_directed_cells.mp4" type="video/mp4" />
+                    <source src="/image_gallery/Research/random_v_directed_cells.mp4" type="video/mp4" />
                 </video>
-                <img src="/hemocyte_flow_field.png" alt="hemocyte flow field" className="max-w-full" />
+                <img src="/image_gallery/Research/hemocyte_flow_field.png" alt="hemocyte flow field" className="max-w-full" />
             </div>
             </LinksBox>
 

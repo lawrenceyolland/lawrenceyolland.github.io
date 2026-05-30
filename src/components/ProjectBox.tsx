@@ -74,7 +74,7 @@ const PROJECT_DATA: ProjectSection[] = [
     },
     {
         heading: 'Coding with the Kiddos',
-        description: "My eldest (4yo) has recently taken an interest in programming, so here's some informal coding experiments we've built.",
+        description: "My eldest (4yo) has recently taken an interest in programming, so here's some informal coding experiments we've built. Code will be on GitHub once tidied up.",
         items: [
             {
                 heading: 'Super Simple Cat',

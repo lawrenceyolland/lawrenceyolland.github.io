@@ -1,15 +1,3 @@
-import Tag, { classMap } from "./LanguageTag.tsx";
-
-const BIO_TEXT = "Spent 4 years in the lab building data-processing tools in Python and MATLAB to solve complex cell biology questions. " +
-    "6+ years in the broadcast industry delivering client-facing React apps, Node.js APIs, and Go tooling. " +
-    "Currently branching into Java and Solutions Architecture."
-
-type Language = keyof typeof classMap;
-
-const isLanguage = (token: string): token is Language => {
-    return token in classMap;
-};
-
 const Bio = () => {
     return (
         <div className="max-w-2xl leading-relaxed inline-block z-20">
@@ -19,20 +7,7 @@ const Bio = () => {
                 </p>
                 <br/>
                 <p className="whitespace-normal">
-                {BIO_TEXT.split(" ").map((token, idx) => {
-                    const trailing = token.match(/[.,]$/)?.[0] ?? "";
-                    const stripped = token.replace(/[.,]$/g, "").toLowerCase();
-                    const clean = stripped === "node.js" ? "node" : stripped.replace(/\./g, "");
-
-                    return isLanguage(clean) ? (
-                        <span key={idx}>
-                            <Tag language={clean} />
-                            {trailing}
-                        </span>
-                    ) : (
-                        <span key={idx}> {token} </span>
-                    );
-                })}
+                    Spent 4 years in the lab building data-processing tools in <span className="relative font-semibold text-[1em] z-1 underline-python">Python</span> and <span className="relative font-semibold text-[1em] z-1 underline-matlab">MATLAB</span> to solve complex cell biology questions. 6+ years in the broadcast industry delivering client-facing <span className="relative font-semibold text-[1em] z-1 underline-react">React</span> apps, <span className="relative font-semibold text-[1em] z-1 underline-node">Node.js</span> APIs, and <span className="relative font-semibold text-[1em] z-1 underline-go">Go</span> tooling. Currently branching into <span className="relative font-semibold text-[1em] z-1 underline-java">Java</span> and Solutions Architecture.
                 </p>
                 <br/>
                 <p className="whitespace-normal">
