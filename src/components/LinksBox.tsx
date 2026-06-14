@@ -1,5 +1,4 @@
-import {useState} from "react";
-import * as React from "react";
+import {ReactNode, useState} from "react";
 import {SectionHeading} from "./SectionHeading.tsx";
 import {ExternalIcon} from "./ExternalIcon.tsx";
 import {Section} from "./Links.tsx";
@@ -9,7 +8,7 @@ import StackChips from "./StackChips.tsx";
 type LinksBoxProps = {
     sectionData: Section[] | Role[];
     chips: string[];
-    children?: React.ReactNode
+    children?: ReactNode
 }
 
 export const LinksBox = ({sectionData, chips, children}: LinksBoxProps) => {
@@ -22,16 +21,16 @@ export const LinksBox = ({sectionData, chips, children}: LinksBoxProps) => {
                     onClick={() => setCollapsed((prev) => !prev)}
                     className="cursor-pointer transition-all duration-300 text-2xl flex w-full"
                 >
-
                     <div>{section.heading === 'Projects' ? '💻' : '🔬'}</div>
-                    <div className="flex ml-auto ">{collapsed ? '-' : '+'}</div>
+
+                    <div className="flex ml-auto hover:opacity-80">{collapsed ? '-' : '+'}</div>
                 </button>
             </div>
-
             {!collapsed ? (
                 <StackChips chips={chips}/>
             ) : (
                 <div className="flex flex-col gap-3.5">
+                    {children}
                     <ol className="flex flex-col gap-3.5">
                         {section.items.map((item) => (
                             <li key={item.label}>
@@ -49,7 +48,6 @@ export const LinksBox = ({sectionData, chips, children}: LinksBoxProps) => {
                             </li>
                         ))}
                     </ol>
-                    {children}
                 </div>
             )}
         </div>

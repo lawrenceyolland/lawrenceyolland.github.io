@@ -3,7 +3,7 @@ const Title = () => {
       <div className="mb-2.5">
           <h1
               id="title"
-              className="text-xl sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-slate-800"
+              className="text-2xl sm:text-2xl md:text-2xl lg:text-3xl xl:text-4xl text-slate-800"
           >
               Dr Lawrence Yolland
           </h1>

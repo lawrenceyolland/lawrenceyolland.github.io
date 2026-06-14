@@ -17,11 +17,11 @@ const App = () => {
     }, []);
 
     return (
-        <div className="min-h-screen relative">
+        <div className="min-h-screen relative pb-6">
             <header className="fixed top-0 left-0 right-0 z-50 flex justify-end px-10 py-5">
             </header>
 
-            <div className="hidden md:flex fixed top-14 left-0 w-1/2 h-[calc(100vh-3.5rem)] flex-col py-10 px-16 relative overflow-auto bg-[#fdf6e3]">
+            <div className="hidden md:flex fixed top-14 left-0 w-1/2 h-[calc(100vh-3.5rem)] flex-col px-16 relative overflow-auto bg-[#fdf6e3]">
                 <div className="bg-inherit z-100">
                     <Title />
                     <Bio />
@@ -29,20 +29,17 @@ const App = () => {
                 </div>
                 <Crane />
             </div>
-
-
-
-            <div className="right-panel md:fixed md:top-14 md:right-0 md:w-1/2 md:h-[calc(100vh-3.5rem)] md:overflow-y-auto pt-14 md:pt-0">
+            
+            <div className="right-panel md:fixed md:top-14 md:right-0 md:w-1/2 md:h-[calc(100vh-3.5rem)] md:overflow-y-auto md:pt-0 pb-3">
                 <div className="md:hidden pt-10 pb-0 px-8">
                     <Title />
                     <Bio />
                     <DownloadResume />
                 </div>
 
-                <div className="xs:pt-0 sm:pt-0 md:pt-0 lg:pt-5 xl:pt-5 pr-10 ">
+                <div className="pt-0 pr-3 pl-3 ">
                     <Links />
                 </div>
-
             </div>
         </div>
 )};

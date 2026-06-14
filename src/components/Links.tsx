@@ -80,18 +80,28 @@ const Links = () => {
                 sectionData={RESEARCH_SECTION}
                 chips={["cell biology", "image analysis", "Python", "MatLab" , "R"]}>
                 <div className="flex flex-row flex-wrap gap-4 mt-2">
-                <video autoPlay loop muted playsInline className="max-w-full">
+                    <p className="w-full">
+                        How do cells move? The prevailing model suggests that cells migrate by extending their leading edge forward - a "front wheel drive" mechanism where the front of the cell pulls it in a given direction. My research challenged this view.
+                    </p>
+                    <p className="w-full">
+                        Working with Drosophila macrophages, I developed computational tools to precisely map the flow of Actin - the protein network that gives cells their structural integrity and drives their movement. Actin flows continuously rearward within migrating cells, pushed by polymerisation at the front and pulled by molecular motors at the rear.
+                    </p>
+                    <p className="w-full">
+                        Through mathematical analysis of this flow, I found it to be far more organised than previously recognised. Distinct regions of network compression remain stable over time, and specific zones exist where Actin motion undergoes a sharp reversal in direction. Strikingly, the position of these transition zones relative to the cell nucleus strongly correlates with the direction of cell movement.
+                    </p>
+                    <p className="w-full">
+                        This reveals a hidden structure and asymmetry within the Actin flow of migrating cells, pointing to a "rear wheel drive" model of migration - where organised flow from behind, rather than leading-edge extension from the front, coordinates movement. This has broad implications for our understanding of development, immunity, and cancer metastasis.
+                    </p>
+                    <video autoPlay loop muted playsInline className="max-w-full">
                     <source src="/image_gallery/Research/random_v_directed_cells.mp4" type="video/mp4" />
                 </video>
                 <img src="/image_gallery/Research/hemocyte_flow_field.png" alt="hemocyte flow field" className="max-w-full" />
             </div>
             </LinksBox>
-
             <ProjectBox />
             <PersonalBox path="Home" heading="Life" cards={HOME_CARDS} />
             <PersonalBox path="Dog" heading="Doggo" cards={DOG_CARDS} />
             <PersonalBox path="DIY" heading="Other Builds" cards={DIY_CARDS}/>
-
         </div>
     )
 };
